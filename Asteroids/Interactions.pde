@@ -1,12 +1,20 @@
 void mousePressed() {
-  if (main == HOME) {
+  if (mode == HOME) {
     homePressed();
-  } else if (main == GAME) {
+  } else if (mode == GAME) {
     gamePressed();
-  } else if (main == GAMEOVER) {
+  } else if (mode == GAMEOVER) {
     gameoverPressed();
   } else {
-    println("MODE FRAMEWORK ERROR");
+    println("CLICK THE BUTTONS! NOT THE BACKGROUND! ROFL");
+  }
+}
+
+void mouseReleased() {
+  if (mode == GAME) {
+    gameReleased();
+  } else {
+    println("CLICK THE BUTTONS! NOT THE BACKGROUND! ROFL");
   }
 }
 

@@ -3,5 +3,5 @@ void gameover() {
 }
 
 void gameoverPressed() {
-  main = HOME;
+  mode = HOME;
 }
