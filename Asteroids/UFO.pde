@@ -1,5 +1,6 @@
 class UFO extends GameObject {
   int r;
+  int timer;
 
   UFO() {
     lives = 1;
@@ -7,15 +8,19 @@ class UFO extends GameObject {
     r = (int)((random(0, 1)) * 4 + 1);
     if (r == 1) {
       loc = new PVector(random(0, width), 0);
-      velocity.rotate(PI);
+      //velocity.rotate(PI);
+      velocity.rotate(180);
     } else if (r == 2) {
       loc = new PVector(random(0, width), height);
+      velocity.rotate(0);
     } else if (r == 3) {
       loc = new PVector(0, random(0, height));
-      velocity.rotate(HALF_PI);
-    } else if (r == 3) {
+      //velocity.rotate(HALF_PI);
+      velocity.rotate(90);
+    } else if (r == 4) {
       loc = new PVector(width, random(0, height));
-      velocity.rotate(-HALF_PI);
+      //velocity.rotate(HALF_PI * 3);
+      velocity.rotate(270);
     } else {
       println("ERROR WITH INT \"r\" in UFO CLASS!");
     }

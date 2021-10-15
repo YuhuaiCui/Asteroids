@@ -4,6 +4,7 @@ class Ship extends GameObject {
   //PVector directionX, directionY;
   int shotTimer, threshold;
 
+
   //2. Constructor(s)
   Ship() {
     lives = 3;
@@ -31,9 +32,9 @@ class Ship extends GameObject {
 
   void act() {
     super.act();
-    
+
     shotTimer++;
-    
+
     //if (upkey || wkey) velocity.add(directionY);
     //if (downkey || skey) velocity.sub(directionY);
     //if (leftkey || akey) velocity.add(directionX);
@@ -46,7 +47,7 @@ class Ship extends GameObject {
       velocity.sub(direction);
     }
     if (leftkey || akey) {
-    direction.rotate(-radians(5));
+      direction.rotate(-radians(5));
     }
     if (rightkey || dkey) {
       direction.rotate(radians(5));

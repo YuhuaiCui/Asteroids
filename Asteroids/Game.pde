@@ -1,5 +1,6 @@
 int fireTimer;
 int fireThreshold = 15;
+int ufoTimer = 1000;
 boolean mouseHold;
 
 void game() {
@@ -24,6 +25,15 @@ void game() {
       i++;
     }
   }
+  
+  //UFO
+  if (ufoTimer > 0) {
+    ufoTimer--;
+  } else {
+    ufoTimer = 1000;
+    myObjects.add(new UFO());
+  }
+  
   
   //holding mouse down to fire
   if (mousePressed && fireTimer > fireThreshold) {
