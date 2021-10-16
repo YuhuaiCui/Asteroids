@@ -9,6 +9,9 @@ void game() {
   //Ship
   myShip.show();
   myShip.act();
+  if (myShip.lives == 0) { 
+   mode = GAMEOVER; 
+  }
 
   //Bullets
   fireTimer++;

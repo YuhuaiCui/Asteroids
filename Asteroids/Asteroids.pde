@@ -17,6 +17,7 @@ color purple = #651F71;
 color blurple = #7037CD;
 color orange = #FF4D00;
 color yellow = #FFC500;
+color brightBlue = #0069FF;
 color base;
 
 //ints
